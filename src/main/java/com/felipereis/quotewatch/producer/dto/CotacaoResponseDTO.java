@@ -1,4 +1,4 @@
-package dto;
+package com.felipereis.quotewatch.producer.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

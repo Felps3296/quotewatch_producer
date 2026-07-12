@@ -1,4 +1,4 @@
-package repository;
+package com.felipereis.quotewatch.producer.repository;
 
 import com.felipereis.quotewatch.producer.model.Cotacao;
 import org.springframework.data.jpa.repository.JpaRepository;
