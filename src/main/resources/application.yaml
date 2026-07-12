@@ -13,3 +13,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+awesomeapi:
+  base-url: https://economia.awesomeapi.com.br
+  timeout-ms: 5000
