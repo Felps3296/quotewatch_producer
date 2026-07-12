@@ -1,6 +1,7 @@
 package com.felipereis.quotewatch.producer.service;
 
 import com.felipereis.quotewatch.producer.dto.CotacaoResponseDTO;
+import com.felipereis.quotewatch.producer.exception.CotacaoNaoEncontradaException;
 import com.felipereis.quotewatch.producer.model.Cotacao;
 import com.felipereis.quotewatch.producer.repository.CotacaoRepository;
 import lombok.RequiredArgsConstructor;
