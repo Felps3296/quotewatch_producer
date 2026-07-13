@@ -11,11 +11,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class CotacaoMapperTest {
 
+    //Acessar classe mapper e guarda na variavel mapper
     private final CotacaoMapper mapper = new CotacaoMapper();
 
     @Test
     void deveConverterCotacaoExternaParaEntidadeCorretamente() {
-        // Arrange: monta um cenario fake
+        // Arrange: monta um objeto fake
         CotacaoExternaDTO externa = new CotacaoExternaDTO(
                 "USD",
                 "BRL",
@@ -30,10 +31,12 @@ class CotacaoMapperTest {
                 "2026-07-10 18:27:18"
         );
 
-        // Act: executa o metodo que estamos testando
+        // Act: executa o metodo que estamos testando, guardando o retorno na variavel "resultado"
         Cotacao resultado = mapper.toEntity(externa);
 
         // Assert: confere se o resultado e exatamente o que esperamos
+        // eu afirmo que ALGO é igual a VALOR_ESPERADO — se não for, o teste falha
+        // assertThat( ALGO ).isEqualTo( VALOR_ESPERADO );
         assertThat(resultado.getMoeda()).isEqualTo("USD");
         assertThat(resultado.getValorCompra()).isEqualByComparingTo(new BigDecimal("5.1064"));
         assertThat(resultado.getValorVenda()).isEqualByComparingTo(new BigDecimal("5.1164"));
