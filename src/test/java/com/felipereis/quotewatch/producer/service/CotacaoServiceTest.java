@@ -28,7 +28,7 @@ class CotacaoServiceTest {
     void deveRetornarUltimaCotacaoQuandoMoedaExiste() {
         // Arrange
         // os parametros tem que ser passado como null, pq o java não deixa pular parametros de um construtor
-        cotacaoService = new CotacaoService(cotacaoRepository, null, null);
+        cotacaoService = new CotacaoService(cotacaoRepository, null, null, null);
 
         Cotacao cotacaoSalva = new Cotacao();
         cotacaoSalva.setId(1L);
@@ -55,7 +55,7 @@ class CotacaoServiceTest {
     @Test
     void deveLancarExcecaoQuandoMoedaNaoExiste() {
         // Arrange
-        cotacaoService = new CotacaoService(cotacaoRepository, null, null);
+        cotacaoService = new CotacaoService(cotacaoRepository, null, null, null);
 
         //conferindo se tratamento de erro está retornando
         when(cotacaoRepository.findFirstByMoedaOrderByDataCotacaoDesc("XYZ"))

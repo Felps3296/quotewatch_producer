@@ -16,7 +16,7 @@ public class CotacaoScheduler {
     @Scheduled(fixedRate = 60000)
     public void coletarCotacaoUsd() {
         log.info("Iniciando coleta de cotacao USD");
-        cotacaoService.salvarCotacao("USD");
-        log.info("Cotacao USD salva com sucesso");
+        cotacaoService.publicarCotacao("USD");
+        log.info("Cotacao USD publicada no Kafka com sucesso");
     }
 }
