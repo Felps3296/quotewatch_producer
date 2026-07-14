@@ -39,7 +39,7 @@ class CotacaoServiceTest {
         cotacaoSalva.setDataCotacao(LocalDateTime.now());
         cotacaoSalva.setDataColeta(LocalDateTime.now());
 
-        //Quando for chamado o metddo do repository pedindo USD finge que encontrou e retorna a variavel cotacaosalva
+        //Quando for chamado o metodo do repository pedindo USD finge que encontrou e retorna a variavel cotacaosalva
         when(cotacaoRepository.findFirstByMoedaOrderByDataCotacaoDesc("USD"))
                 .thenReturn(Optional.of(cotacaoSalva));
 
@@ -62,7 +62,7 @@ class CotacaoServiceTest {
                 .thenReturn(Optional.empty());
 
         // Act + Assert
-        //eu afirmo que isso vai lançar uma exceção
+        //confirmar se isso vai lançar uma exceção
         //Quando o banco não encontra a moeda, meu Service lança a exceção certa, com a mensagem certa — em vez de, por exemplo, devolver null
         assertThatThrownBy(() -> cotacaoService.buscarUltimaCotacao("XYZ"))
                 .isInstanceOf(CotacaoNaoEncontradaException.class)
