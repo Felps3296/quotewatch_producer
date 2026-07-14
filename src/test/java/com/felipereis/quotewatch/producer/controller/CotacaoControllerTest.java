@@ -1,6 +1,5 @@
 package com.felipereis.quotewatch.producer.controller;
 
-import com.felipereis.quotewatch.producer.mapper.CotacaoMapper;
 import com.felipereis.quotewatch.producer.model.Cotacao;
 import com.felipereis.quotewatch.producer.repository.CotacaoRepository;
 import org.junit.jupiter.api.Test;
